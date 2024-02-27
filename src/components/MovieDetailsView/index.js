@@ -19,7 +19,6 @@ class MovieDetailsView extends Component {
     apiStatus: apiStatusConstants.initial,
     movieDetailsList: {},
     genresList: [],
-    similarMoviesList: [],
     spokenLanguagesList: [],
     castDetailsList: [],
   }
@@ -125,8 +124,12 @@ class MovieDetailsView extends Component {
   renderLoadingView = () => <Loading />
 
   renderSuccessView = () => {
-    const {movieDetailsList, genresList, spokenLanguagesList, castDetailsList} =
-      this.state
+    const {
+      movieDetailsList,
+      genresList,
+      spokenLanguagesList,
+      castDetailsList,
+    } = this.state
     const {
       adult,
       backdropPath,
@@ -148,7 +151,10 @@ class MovieDetailsView extends Component {
 
     return (
       <>
-        <div style={{backgroundImage: `url(http://localhost:3000${backdropPath})`}} className="movie-details-home-page">
+        <div
+          style={{backgroundImage: `url(http://localhost:3000${backdropPath})`}}
+          className="movie-details-home-page"
+        >
           <Header />
           <div className="home-page-container">
             <h1 className="title">{title}</h1>
