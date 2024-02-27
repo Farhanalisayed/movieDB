@@ -5,6 +5,7 @@ import Header from '../Header'
 import Loading from '../Loading'
 
 import './index.css'
+
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
