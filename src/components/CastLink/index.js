@@ -2,10 +2,14 @@ import './index.css'
 
 const CastLink = props => {
   const {castDets} = props
-  const {id, adult, gender, name, profilePath, popularity, character} = castDets
+  const {gender, name, profilePath, popularity, character} = castDets
   return (
     <li>
-      <img className="popular-img" alt={name} src={{`http://localhost${profilePath`}} />
+      <img
+        className="popular-img"
+        alt={name}
+        src={`http://localhost${profilePath}`}
+      />
       <div>
         <h1>
           {name} <span>(Gender:{gender})</span>
