@@ -124,12 +124,8 @@ class MovieDetailsView extends Component {
   renderLoadingView = () => <Loading />
 
   renderSuccessView = () => {
-    const {
-      movieDetailsList,
-      genresList,
-      spokenLanguagesList,
-      castDetailsList,
-    } = this.state
+    const {movieDetailsList, genresList, spokenLanguagesList, castDetailsList} =
+      this.state
     const {
       adult,
       backdropPath,
@@ -147,12 +143,14 @@ class MovieDetailsView extends Component {
     const movieRuntime = `${hours}h ${minutes}m `
     const censorCertificate = adult ? 'A' : 'U/A'
     const releaseYear = format(new Date(releaseDate), 'yyyy')
-    const movieReleaseDate = format(new Date(releaseDate), 'do MMMM Y')
+    const movieReleaseDate = format(new Date(releaseDate), 'do MM Y')
 
     return (
       <>
         <div
-          style={{backgroundImage: `url(http://localhost:3000${backdropPath})`}}
+          style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/w500${backdropPath})`,
+          }}
           className="movie-details-home-page"
         >
           <Header />
