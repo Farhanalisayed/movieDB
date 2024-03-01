@@ -1,10 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
 
-import {HiOutlineSearch} from 'react-icons/hi'
-import {MdMenuOpen} from 'react-icons/md'
-import {AiFillCloseCircle} from 'react-icons/ai'
-
 import './index.css'
 
 class Header extends Component {
@@ -62,43 +58,15 @@ class Header extends Component {
               <li>Upcoming</li>
             </Link>
           </ul>
-          <div className="icons-container">
-            <div className={searchContainer}>
-              {searchRoute && (
-                <input
-                  value={searchValue}
-                  onChange={this.getSearchInput}
-                  placeholder="Search"
-                  type="search"
-                  className="search-input"
-                />
-              )}
-              <Link to="/search">
-                <button
-                  onClick={this.onSearch}
-                  type="button"
-                  data-testid="searchButton"
-                  className={searchBtn}
-                >
-                  <HiOutlineSearch className={searchIcon} />
-                </button>
-              </Link>
-            </div>
-            <Link to="/account">
-              <img
-                className="avatar show1"
-                alt="profile"
-                src="https://res.cloudinary.com/dsiyffj0o/image/upload/v1671165868/Avatar_gbes4m.png"
-              />
-            </Link>
-            <button
-              onClick={this.menuShow}
-              type="button"
-              className="show close-btn"
-            >
-              <MdMenuOpen className="hamburger icons" />
-            </button>
-          </div>
+        </div>
+        <div className={searchContainer}>
+          <input
+            value={searchValue}
+            onChange={this.getSearchInput}
+            placeholder="Search"
+            type="search"
+            className="search-input"
+          />
         </div>
 
         <nav className="show">
@@ -113,15 +81,6 @@ class Header extends Component {
               <Link to="/upcoming" className={accountRoute}>
                 <li>Upcoming</li>
               </Link>
-              <li>
-                <button
-                  onClick={this.menuHide}
-                  className="close-btn"
-                  type="button"
-                >
-                  <AiFillCloseCircle className="close icons" />
-                </button>
-              </li>
             </ul>
           )}
         </nav>
