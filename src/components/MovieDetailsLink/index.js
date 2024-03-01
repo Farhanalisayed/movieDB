@@ -9,7 +9,7 @@ const MovieDetailsLink = props => {
       <img
         className="popular-img"
         alt={title}
-        src={`http://localhost${posterPath}`}
+        src={`https://image.tmdb.org/t/p/w500${posterPath}`}
       />
       <Link to={`/movies/${id}`}>
         {' '}
