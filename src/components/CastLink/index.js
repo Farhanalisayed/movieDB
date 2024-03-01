@@ -8,12 +8,10 @@ const CastLink = props => {
       <img
         className="popular-img"
         alt={name}
-        src={`http://localhost${profilePath}`}
+        src={`https://image.tmdb.org/t/p/original/${profilePath}`}
       />
-      <div>
-        <h1>
-          {name} <span>(Gender:{gender})</span>
-        </h1>
+      <div className="details">
+        <h1>{name}</h1>
         <p>Playing character of: {character} </p>
         <p>Having popularity of {popularity}</p>
       </div>
